@@ -31,45 +31,44 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="index.html">Inicio</a>
-                        <a class="nav-link" href="pokedex.html">Pokedex</a>
+                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link active" href="pokedex.html">Pokedex</a>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
     <main>
-        <section>
+<!--Contenedor-->
+<section class="row contenedor mx-auto p-3">
+
+</section>
+<!--Template Pokemons-->
+<div class="d-none">
+    <div class="card col-lg-4 col-md-6 col-sm-12 molde">
+        <div class="card-body">
             <div class="row">
-                <div class="col-lg-10 col-md-10 col-sm-12 mx-auto">
-                    <div class="card mt-3">
-                        <div class="card-header text-center bg-danger text-warning">
-                            <span>¡¡ Atrapalos a todos !!</span>
-                        </div>
-                        <div class="card-body">
-                            <div class="row">
-                                <section class="col-lg-6 col-md-6 col-sm-6 float-left">
-                                    <div class="card-header text-center bg-white-50 text-dark">
-                                        <span>Bienvenido</span>
-                                    </div>
-                                    <div class="card-body text-center">
-                                        <span>Te damos a bienvenida a la Pokedex</span>
-                                    </div>
-                                </section>
-                                <section class="col-lg col-md col-sm">
-                                    <div class="card-header text-center bg-dark text-white">
-                                        <span>Pokedex</span>
-                                    </div>
-                                    <div class="card-body text-center ">
-                                        <span>Puedes buscar pokemon <a class ="link-success"href="pokedex.html">aqui</a></span>
-                                    </div>
-                                </section>
-                            </div>                           
-                        </div>
-                    </div>
+                <h6 class="col-12 text-center">
+                    <img class="pokemon-imagen img-pokemon img-fluid" src="" alt="">
+                </h6>
+            </div>
+            <div class="back-info rounded p-2">
+                <div class="row">
+                    <h6 class="col-6">N° Pokedex</h6> <h6 class="col pokemon-numero"></h6>
+                </div>
+                <div class="row">
+                    <h6 class="col-6">Nombre</h6> <h6 class="col pokemon-nombre"></h6>
+                </div>
+                <div class="row">
+                    <h6 class="col-6">Tipo</h6> <h6 class="col pokemon-tipo"></h6>
                 </div>
             </div>
-        </section>
+            
+
+        </div>
+    </div>
+</div>
+
     </main>
     <footer>
 
@@ -81,7 +80,7 @@
     <!--Axiox-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <!--Sweet Alert-->
-    <script src="js/init.js"></script>
+    <script src="js/init2.js"></script>
     <!--Script propios-->
 </body>
 
