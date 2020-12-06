@@ -47,7 +47,7 @@ window.datosPokemon = async (id)=>{
 //Buscar Pokemon
 const botonBuscar = document.querySelector(".btn-buscar")
 botonBuscar.addEventListener('click',()=>{
-    let txtBuscar = document.querySelector(".txt-buscar").value; //Se obtiene lo que elusuario busca
+    let txtBuscar = document.querySelector(".txt-buscar").value.capitalize(); //Se obtiene lo que elusuario busca
     let elementos = document.querySelector(".contenedor"); //obtener todo el contenedor
     let pokemons = elementos.querySelectorAll('*'); //se obrtiene a sus hijos
     let result = false;
