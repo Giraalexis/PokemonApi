@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="sticky-top">
         <!--Navegacion-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -37,39 +37,53 @@
                 </div>
             </div>
         </nav>
+        <!--Buscador-->
+        <section class="row ">
+            <div class="col-9">
+                <input class="form-control txt-buscar" placeholder="Ingrese nombre del Pokemon" type="text">
+            </div>
+            <div class="col d-grid gap-2 p-0">
+                <button class="btn btn-success btn-buscar">Buscar</button>
+            </div>
+        </section>
     </header>
     <main>
-<!--Contenedor Pokemons-->
-<section class="row contenedor">
 
-</section>
-<!--Template Pokemons-->
-<div class="d-none">
-    <div class="card col-lg-4 col-md-6 col-sm-11 molde mx-auto">
-        <div class="card-body bg-white-50 ">
-            <div class="row">
-                <h6 class="col-12 text-center">
-                    <img class="pokemon-imagen img-pokemon img-fluid " src="" alt="">
-                </h6>
-            </div>
-            <div class="back-info rounded pt-1 pl-3 pr-3">
-                <div class="row pl-2 border-bottom">
-                    <h6 class="col-6 ">N° Pokedex</h6> <h6 class="col pokemon-numero"></h6>
-                </div>
-                <div class="row pl-2 border-bottom">
-                    <h6 class="col-6 ">Nombre</h6> <h6 class="col pokemon-nombre"></h6>
-                </div>
-                <div class="row pl-2 ">
-                    <h6 class="col-6">Tipo</h6>
-                    <h6 class="col pokemon-tipo"></h6>
-                    <h6 class="col pokemon-tipo2"></h6>
-                </div>
-            </div>
-            
 
+        <!--Contenedor Pokemons-->
+        <section class="row contenedor">
+
+        </section>
+
+        <!--Template Pokemons-->
+        <div class="d-none">
+            <div class="card col-lg-4 col-md-6 col-sm-11 molde mx-auto">
+                <div class="card-body bg-white-50 ">
+                    <div class="row">
+                        <h6 class="col-12 text-center">
+                            <img class="pokemon-imagen img-pokemon img-fluid " src="" alt="">
+                        </h6>
+                    </div>
+                    <div class="back-info rounded pt-1 pl-3 pr-3">
+                        <div class="row pl-2 border-bottom">
+                            <h6 class="col-6 ">N° Pokedex</h6>
+                            <h6 class="col pokemon-numero"></h6>
+                        </div>
+                        <div class="row pl-2 border-bottom">
+                            <h6 class="col-6 ">Nombre</h6>
+                            <h6 class="col pokemon-nombre"></h6>
+                        </div>
+                        <div class="row pl-2 ">
+                            <h6 class="col-6">Tipo</h6>
+                            <h6 class="col pokemon-tipo"></h6>
+                            <h6 class="col pokemon-tipo2"></h6>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-    </div>
-</div>
 
     </main>
     <footer>

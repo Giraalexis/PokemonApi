@@ -1,9 +1,10 @@
 
 //peticion de Pokemones
+
 window.addEventListener('DOMContentLoaded', async()=>{
     //retorna una promesa
     let respuesta = await axios.get("https://pokeapi.co/api/v2/pokedex/1/")
-    let pokemones = respuesta.data.pokemon_entries;
+    const pokemones = respuesta.data.pokemon_entries;
     window.mostrar(pokemones);
 })
 
@@ -20,6 +21,8 @@ window.mostrar = async(pokemones)=>{
         copia.querySelector(".pokemon-imagen").src = datos[0]; //la imagen
         copia.querySelector(".pokemon-tipo").innerText = datos[1]; //el tipo 1
         copia.querySelector(".pokemon-tipo2").innerText = datos[2]; //el tipo 2
+        copia.nombre = p.pokemon_species.name.capitalize(); //añadir atributo para buscar x nombre
+        //console.log(copia.nombre);
         contenedor.appendChild(copia);
     }
 }
@@ -40,6 +43,32 @@ window.datosPokemon = async (id)=>{
     }
     
 }
+
+//Buscar Pokemon
+const botonBuscar = document.querySelector(".btn-buscar")
+botonBuscar.addEventListener('click',()=>{
+    let txtBuscar = document.querySelector(".txt-buscar").value; //Se obtiene lo que elusuario busca
+    let elementos = document.querySelector(".contenedor"); //obtener todo el contenedor
+    let pokemons = elementos.querySelectorAll('*'); //se obrtiene a sus hijos
+    let result = false;
+    //console.log(pokemons);
+    for (let i = 0; i < pokemons.length; i++){ //Recorremos los pokemones
+        let p = pokemons[i];
+        //console.log(p);
+        if (p.nombre == txtBuscar){
+           result=true;
+           Swal.fire({
+            title: p.nombre,
+            html: p.innerHTML
+            });
+        }
+    }
+    if (result == false){
+        Swal.fire({
+            title: "No se ha encontrado: "+txtBuscar
+            });
+    }
+})
 
 //Capitalizar texto
 String.prototype.capitalize = function() {
