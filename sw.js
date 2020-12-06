@@ -1,12 +1,12 @@
 //Recursos necesarios para funcionar
 const APP_SHELL = [
-    "/index.html",
-    "/pokedex.html",
-    "/css/style.css",
-    "/img/logo.png",
-    "/js/init.js",
-    "/js/init2.js",
-    "/vendor/fontawesome-free-5.15.1-web/css/all.min.css"
+    "index.html",
+    "pokedex.html",
+    "css/style.css",
+    "img/logo.png",
+    "js/init.js",
+    "js/init2.js",
+    "vendor/fontawesome-free-5.15.1-web/css/all.min.css"
 ]
 
 //Lo que no deberia cambiar
