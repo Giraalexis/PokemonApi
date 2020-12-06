@@ -1,12 +1,12 @@
 //Recursos necesarios para funcionar
 const APP_SHELL = [
-    "index.html",
-    "pokedex.html",
-    "css/style.css",
-    "img/logo.png",
-    "js/init.js",
-    "js.init2.js",
-    "vendor/fontawesome-free-5.15.1-web/css/all.min.css"
+    "/index.html",
+    "/pokedex.html",
+    "/css/style.css",
+    "/img/logo.png",
+    "/js/init.js",
+    "/js/init2.js",
+    "/vendor/fontawesome-free-5.15.1-web/css/all.min.css"
 ]
 
 //Lo que no deberia cambiar
@@ -18,7 +18,7 @@ const APP_SHELL_INMUTABLE = [
 ]
 
 //Nombres
-const CACHE_ESTATICO = "estativo-v1";
+const CACHE_ESTATICO = "estatico-v1";
 const CACHE_INMUTABLE = "inmutable-v1";
 
 //instalacion Service Worker
@@ -53,7 +53,7 @@ self.addEventListener('fetch',e=>{
                 //Si la peticion es correcta
                 if (newRes.ok || newRes.type == 'opaque'){
                     //Guardar Peticion en Cache dinamico
-                    return caches.open("dinamico-vi").then(cache=>{
+                    return caches.open("dinamico-v1").then(cache=>{
                         cache.put(e.request, newRes.clone());
                         return newRes.clone();
                     });
