@@ -56,7 +56,7 @@ const botonBuscar = document.querySelector(".btn-buscar")
 botonBuscar.addEventListener('click',()=>{
     let txtBuscar = document.querySelector(".txt-buscar").value.capitalize(); //Se obtiene lo que elusuario busca
     let elementos = document.querySelector(".contenedor"); //obtener todo el contenedor
-    let pokemons = elementos.querySelectorAll('*'); //se obrtiene a sus hijos
+    let pokemons = elementos.querySelectorAll('*'); //se obtiene a sus hijos
     let result = false;
     //console.log(pokemons);
     for (let i = 0; i < pokemons.length; i++){ //Recorremos los pokemones
