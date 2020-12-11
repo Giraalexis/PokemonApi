@@ -32,7 +32,11 @@ window.mostrar = async(pokemon)=>{
     const contenedor = document.querySelector(".contenedor");
     let copia = molde.cloneNode(true);
 
-    copia.querySelector(".pokemon-imagen").src = pokemon.sprites.front_default;
+    if(!pokemon.sprites.front_default){ //Si no encuentra imagen
+        copia.querySelector(".pokemon-imagen").src = "img/404.png";
+    }else{
+        copia.querySelector(".pokemon-imagen").src = pokemon.sprites.front_default;
+    }
     copia.querySelector(".pokemon-numero").innerText = pokemon.id;
     copia.querySelector(".pokemon-nombre").innerText = pokemon.name.capitalize();
     copia.querySelector(".pokemon-tipo").innerText = pokemon.types[0].type.name.capitalize();
@@ -90,7 +94,11 @@ window.datosPokemon = function(DatosPokemon){
     const molde = document.querySelector(".molde");
     let copia = molde.cloneNode(true); 
 
-    copia.querySelector(".pokemon-imagen").src = DatosPokemon.sprites.front_default;
+    if(!DatosPokemon.sprites.front_default){ //si no encuentra imagen
+        copia.querySelector(".pokemon-imagen").src = "img/404.png";
+    }else{
+        copia.querySelector(".pokemon-imagen").src = DatosPokemon.sprites.front_default;
+    }
     copia.querySelector(".pokemon-numero").innerText = DatosPokemon.id;
     copia.querySelector(".pokemon-nombre").innerText = DatosPokemon.name.capitalize();
     copia.querySelector(".pokemon-tipo").innerText = DatosPokemon.types[0].type.name.capitalize();
