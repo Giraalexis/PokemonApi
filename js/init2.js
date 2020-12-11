@@ -65,10 +65,9 @@ botonBuscar.addEventListener('click', async ()=>{
     let pokemons = elementos.getElementsByClassName('btn-pokemon-detalle'); //se obrtiene a sus hijos
     
     let result = false;
-    //console.log(pokemons);
     for (let i = 0; i < pokemons.length; i++){ //Recorremos los pokemones
         let p = pokemons[i];
-        if (p.pokemonDatos.name == txtBuscar){
+        if (p.pokemonDatos.name == txtBuscar || p.pokemonDatos.id ==txtBuscar){
            datosPokemon(p.pokemonDatos);
            result = true;
            break;
